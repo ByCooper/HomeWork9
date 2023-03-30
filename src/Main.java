@@ -72,15 +72,10 @@ public class Main {
 
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 
-//        for (int i = 0; i < reverseFullName.length / 2; i++) {
-//            char let = reverseFullName[i];
-//            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
-//            reverseFullName[reverseFullName.length - 1 - i] = let;
-//            }
-        for (int i = 0; i < reverseFullName.length; i++) {
-            for (int j = 0; j < reverseFullName.length; j++) {
-
-            }
+        for (int i = 0; i < reverseFullName.length / 2; i++) {
+            char let = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
+            reverseFullName[reverseFullName.length - 1 - i] = let;
         }
         System.out.println(Arrays.toString(reverseFullName));
     }
