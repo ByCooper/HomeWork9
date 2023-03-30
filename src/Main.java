@@ -44,7 +44,7 @@ public class Main {
         int minSum = arrTask2[0];
         int maxSum = arrTask2[0];
 
-        for (int i = 1; i < arrTask2.length - 1; i++) {
+        for (int i = 1; i < arrTask2.length; i++) {
             if (arrTask2[i] < minSum) {
                 minSum = arrTask2[i];
             }
@@ -60,7 +60,7 @@ public class Main {
 
         int[] arrTask3 = generateRandomArray();
         int sumMonth = 0;
-        for (int i = 0; i < arrTask3.length - 1; i++) {
+        for (int i = 0; i < arrTask3.length; i++) {
             sumMonth = sumMonth + arrTask3[i];
         }
         double averageSum = (double) sumMonth / arrTask3.length;
@@ -72,11 +72,16 @@ public class Main {
 
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
 
-        for (int i = 0; i < reverseFullName.length / 2; i++) {
-            char let = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
-            reverseFullName[reverseFullName.length - 1 - i] = let;
+//        for (int i = 0; i < reverseFullName.length / 2; i++) {
+//            char let = reverseFullName[i];
+//            reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
+//            reverseFullName[reverseFullName.length - 1 - i] = let;
+//            }
+        for (int i = 0; i < reverseFullName.length; i++) {
+            for (int j = 0; j < reverseFullName.length; j++) {
+
             }
+        }
         System.out.println(Arrays.toString(reverseFullName));
     }
 }
