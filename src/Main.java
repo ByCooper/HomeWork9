@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Arrays;
 
 public class Main {
@@ -29,7 +30,7 @@ public class Main {
 
         int[] arrTask1 = generateRandomArray();
         int sumMonth = 0;
-        for (int i = 0; i < arrTask1.length - 1; i++) {
+        for (int i = 0; i < arrTask1.length; i++) {
             sumMonth = sumMonth + arrTask1[i];
         }
         System.out.println(sumMonth);
@@ -39,15 +40,14 @@ public class Main {
         System.out.println("\n" + "Задача №2" + "\n");
 
         int[] arrTask2 = generateRandomArray();
+        System.out.println(Arrays.toString(arrTask2));
         int minSum = arrTask2[0];
         int maxSum = arrTask2[0];
 
-        for (int i = 0; i < arrTask2.length - 1; i++) {
+        for (int i = 1; i < arrTask2.length - 1; i++) {
             if (arrTask2[i] < minSum) {
                 minSum = arrTask2[i];
             }
-        }
-        for (int i = 0; i < arrTask2.length - 1; i++) {
             if (arrTask2[i] > maxSum) {
                 maxSum = arrTask2[i];
             }
@@ -63,8 +63,8 @@ public class Main {
         for (int i = 0; i < arrTask3.length - 1; i++) {
             sumMonth = sumMonth + arrTask3[i];
         }
-        double averageSum = sumMonth / arrTask3.length;
-        System.out.println("Средняя сумма трат за месяц составила " + averageSum + " рублей");
+        double averageSum = (double) sumMonth / arrTask3.length;
+        System.out.println("Средняя сумма трат за месяц составила " + new DecimalFormat("###,###.##").format(averageSum) + " рублей");
     }
 
     public static void task4() {
